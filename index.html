@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio </title>
+  <style>
+    
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #e8e8e8;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #222;
+      font-weight: 500;
+      transition: color .3s ease;
+    }
+
+    nav a:hover {
+      color: #871717;
+    }
+
+    section {
+      padding: 6rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    /* Hero */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: url("ilustraciona3.png") no-repeat center/cover;
+      color: rgb(0, 0, 0);
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+
+    /* Sobre mí */
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .about img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .about-text {
+      flex: 1;
+    }
+
+    /* Portafolio */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: rgb(255, 255, 255);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: transform .3s ease;
+      
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      padding: 1rem;
+      font-size: 1.2rem;
+    }
+
+    /* Contacto */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input, textarea {
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    button {
+      background: #a71515;
+      border: none;
+      color: white;
+      padding: 1rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background .3s ease;
+    }
+
+    button:hover {
+      background: lab(17.98% 34.58 22.49);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 2.2rem;
+      }
+      header {
+        flex-direction: column;
+        gap: .5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Gabriela Nnas</h1>
+    <nav>
+      <ul>
+        <li><a href="#hero">Inicio</a></li>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#portfolio">Trabajos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <h2>Hola, soy ElMoicast</h2>
+    <p>Artista visual del tatuaje + diseño digital. </p>
+  </section>
+
+  <!-- Sobre mí -->
+  <section id="about">
+    <div class="about">
+      <img src="/A7.jpg" alt="Foto artista">
+      <div class="about-text">
+        <h2>Tu estudio de tatuajes</h2>
+        <p>
+          Somos un estudio de tatuajes dedicado a transformar ideas en arte permanente. Nos especializamos en diseños personalizados, cuidando cada detalle para que cada pieza sea única, auténtica y con significado.
+
+Trabajamos con altos estándares de higiene, materiales de calidad y técnicas actualizadas, garantizando seguridad y resultados profesionales en cada sesión.
+
+Nuestro enfoque combina creatividad, precisión y pasión por el arte, creando tatuajes que no solo se ven bien, sino que cuentan historias.
+        </p>
+      </div>
+    </div>
+  </section>
+
+<!-- Portafolio -->
+<section id="portfolio">
+  <h2>Trabajos</h2>
+  <div class="portfolio-grid">
+
+    <div class="card">
+      <a href="proyecto1.html">
+        <img src="/A1.jpeg" alt="Proyecto 1">
+        <h3>Proyecto 1</h3>
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="proyecto2.html">
+        <img src="/46.jpeg" alt="Proyecto 2">
+        <h3>Proyecto 2</h3>
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="proyecto3.html">
+        <img src="/A4.jpeg" alt="Proyecto 3">
+        <h3>Proyecto 3</h3>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Contacto -->
+  <section id="contact">
+    <h2>Contacto</h2>
+    <form>
+      <input type="text" placeholder="Tu nombre" required>
+      <input type="email" placeholder="Tu correo" required>
+      <textarea rows="5" placeholder="Escribe tu mensaje..."></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Gabriela Nájera Lagunas. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>
